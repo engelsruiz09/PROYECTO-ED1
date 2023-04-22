@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PROYECTO-ED1.props" />
+</Project>

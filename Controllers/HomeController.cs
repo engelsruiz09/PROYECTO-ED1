@@ -18,7 +18,17 @@ namespace PROYECTO_ED1.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Contacto()
+        {
+            return View();
+        }
+
+        public IActionResult Tratamientos()
         {
             return View();
         }

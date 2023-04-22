@@ -1,0 +1,89 @@
+﻿@model PROYECTO_ED1.Models.Pacientes
+
+@{
+    ViewData["Title"] = "Nuevo paciente";
+}
+<div class="titulo">
+    <br /><br /><br />
+    <h3 style="text-align:center;">Nuevo paciente</h3>
+    <hr style="width: 5%; text-align: center; height: 5px; background-color: #BCD8D9;">
+</div>
+
+<div class="row; col-auto p-5">
+    <div>
+        <form asp-action="Create_Paciente">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DPI" class="control-label"></label>
+                <input asp-for="DPI" class="form-control" />
+                <span asp-validation-for="DPI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Edad" class="control-label"></label>
+                <input asp-for="Edad" class="form-control" />
+                <span asp-validation-for="Edad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono" class="control-label"></label>
+                <input asp-for="Telefono" class="form-control" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FDU" class="control-label"></label>
+                <input asp-for="FDU" class="form-control" />
+                <span asp-validation-for="FDU" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FDP" class="control-label"></label>
+                <input asp-for="FDP" class="form-control" />
+                <span asp-validation-for="FDP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Agregar paciente" class="btn btn-info" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div style="text-align:right; margin-right:50px;">
+    <a asp-action="Index_Paciente" style="color: #246569;">Historial de pacientes</a>
+</div>
+<br />
+<br />
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+@if (null != TempData["VOP"])//Validacion de 8 personas por día
+{
+    <script type="text/javascript">
+        alert('@TempData["VOP"]');
+    </script>
+}
+
+@if (null != TempData["DRP"])//Mensaje de validacion de dpi repetido
+{
+    <script type="text/javascript">
+        alert('@TempData["DRP"]');
+    </script>
+}
+
+@if (null != TempData["Fec"])//Mensaje de validacion de fecha pasada a la actual
+{
+    <script type="text/javascript">
+        alert('@TempData["Fec"]');
+    </script>
+}

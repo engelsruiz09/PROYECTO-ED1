@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\julio\\Downloads\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
+      "projectUniqueName": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
       "projectName": "PROYECTO-ED1",
-      "projectPath": "C:\\Users\\julio\\Downloads\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
+      "projectPath": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
       "packagesPath": "C:\\Users\\julio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\julio\\Downloads\\PROYECTO-ED1\\obj\\",
+      "outputPath": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -70,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

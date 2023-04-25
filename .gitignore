@@ -1,0 +1,22 @@
+# Ignorar archivos generados por Visual Studio
+.vs/
+bin/
+obj/
+
+# Ignorar archivos de registro
+*.log
+
+# Ignorar archivos de respaldo y caché
+*~
+*.swp
+*.bak
+*.cache
+*.DS_Store
+
+# Ignorar archivos de configuración de usuario local
+*.user
+*.suo
+
+# Ignorar archivos de configuración de NuGet
+*.nuget.props
+*.nuget.targets

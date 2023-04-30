@@ -118,26 +118,26 @@ namespace PROYECTO_ED1.Controllers
         {
             try
             {
-                if (Busqueda != null)
-                {
-                    Pacientes viewpasciente = Singleton.Instance.AVL.ObtenerLista().FirstOrDefault(a => a.Nombre == Busqueda);
-                    if (viewpasciente == null)
-                    {
-                        viewpasciente = Singleton.Instance.AVL.ObtenerLista().FirstOrDefault(a => a.DPI == Busqueda);
-                        if (viewpasciente == null)
-                        {
-                            TempData["Bus"] = "No se encontro el Paciente";
-                        }
-                        else
-                        {
-                            return View(viewpasciente);
-                        }
-                    }
-                    else
-                    {
-                        return View(viewpasciente);
-                    }
-                }
+                //if (Busqueda != null)
+                //{
+                //   // Pacientes viewpasciente = Singleton.Instance.AVL.ObtenerLista().FirstOrDefault(a => a.Nombre == Busqueda);
+                //    if (viewpasciente == null)
+                //    {
+                //        //viewpasciente = Singleton.Instance.AVL.ObtenerLista().FirstOrDefault(a => a.DPI == Busqueda);
+                //        if (viewpasciente == null)
+                //        {
+                //            TempData["Bus"] = "No se encontro el Paciente";
+                //        }
+                //        else
+                //        {
+                //            return View(viewpasciente);
+                //        }
+                //    }
+                //    else
+                //    {
+                //        return View(viewpasciente);
+                //    }
+                //}
                 return View();
             }
             catch

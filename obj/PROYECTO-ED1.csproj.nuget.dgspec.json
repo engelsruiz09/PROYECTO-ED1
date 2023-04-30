@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj": {}
+    "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\PROYECTO-ED1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj": {
+    "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\PROYECTO-ED1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
+        "projectUniqueName": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
         "projectName": "PROYECTO-ED1",
-        "projectPath": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
-        "packagesPath": "C:\\Users\\julio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\obj\\",
+        "projectPath": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
+        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
+        "outputPath": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,6 +44,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

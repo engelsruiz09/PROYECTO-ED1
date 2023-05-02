@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj": {}
+    "C:\\Users\\samer\\Documents\\GitHub\\PROYECTO-ED1\\PROYECTO-ED1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj": {
+    "C:\\Users\\samer\\Documents\\GitHub\\PROYECTO-ED1\\PROYECTO-ED1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
+        "projectUniqueName": "C:\\Users\\samer\\Documents\\GitHub\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
         "projectName": "PROYECTO-ED1",
-        "projectPath": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
-        "packagesPath": "C:\\Users\\julio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\obj\\",
+        "projectPath": "C:\\Users\\samer\\Documents\\GitHub\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
+        "packagesPath": "C:\\Users\\samer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samer\\Documents\\GitHub\\PROYECTO-ED1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\samer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,8 +45,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -63,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

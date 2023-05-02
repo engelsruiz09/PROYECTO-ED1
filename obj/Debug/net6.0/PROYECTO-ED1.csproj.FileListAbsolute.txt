@@ -31,3 +31,14 @@ C:\Users\julio\Desktop\PROYECTO-ED1\obj\Debug\net6.0\refint\PROYECTO-ED1.dll
 C:\Users\julio\Desktop\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.pdb
 C:\Users\julio\Desktop\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.genruntimeconfig.cache
 C:\Users\julio\Desktop\PROYECTO-ED1\obj\Debug\net6.0\ref\PROYECTO-ED1.dll
+C:\Users\samer\Documents\GitHub\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.csproj.AssemblyReference.cache
+C:\Users\samer\Documents\GitHub\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samer\Documents\GitHub\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.AssemblyInfoInputs.cache
+C:\Users\samer\Documents\GitHub\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.AssemblyInfo.cs
+C:\Users\samer\Documents\GitHub\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.csproj.CoreCompileInputs.cache
+C:\Users\samer\Documents\GitHub\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\samer\Documents\GitHub\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.RazorAssemblyInfo.cache
+C:\Users\samer\Documents\GitHub\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.RazorAssemblyInfo.cs
+C:\Users\samer\Documents\GitHub\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.dll
+C:\Users\samer\Documents\GitHub\PROYECTO-ED1\obj\Debug\net6.0\ref\PROYECTO-ED1.dll
+C:\Users\samer\Documents\GitHub\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.pdb

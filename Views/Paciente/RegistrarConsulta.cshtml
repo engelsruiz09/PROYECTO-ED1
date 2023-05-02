@@ -1,0 +1,52 @@
+﻿@model PROYECTO_ED1.Models.Pacientes
+
+@{
+    ViewData["Title"] = "RegistrarConsulta";
+}
+<div class="fondo-create">
+    <div class="espacio">
+       <p class="display-1 text-center text-light">Registrar Consulta</p>
+    </div>
+
+    <div class="container bg-light p-5 ">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well well-sm">
+                    <form class="form-horizontal" asp-action="RegistrarConsulta" method="post">
+                        <fieldset>
+                            <legend class="text-center header">Registrar una consulta</legend>
+
+                           
+                            <div class="form-group mb-2">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-12">
+                                    <label asp-for="DPI" class="control-label"></label>
+                                    <input asp-for="DPI" class="form-control" />
+                                    <span asp-validation-for="DPI" class="text-danger"></span>
+                                </div>
+                            </div>               
+                                                     
+                            <div class="form-group mb-2">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                                <div class="col-md-12">
+                                    <label asp-for="FDP" class="control-label"></label>
+                                    <input asp-for="FDP" class="form-control" />
+                                    <span asp-validation-for="FDP" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <input type="submit" value="Registrar Consulta" class="btn btn-primary" />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <a asp-action="Index" class="btn btn-info text-light">Regresar a la lista</a>
+    </div>
+</div>

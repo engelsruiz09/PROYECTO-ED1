@@ -1,10 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PROYECTO_ED1.Models;
 using PROYECTO_ED1.Models.Data;
+using System;
+using System.IO;
+using System.Text;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.VisualBasic.FileIO;
 
 namespace PROYECTO_ED1.Controllers
 {
-    public class PacienteController : Controller
+    public class PacienteController : Controller 
     {
         private IWebHostEnvironment Environment;
         public PacienteController(IWebHostEnvironment _environment)
@@ -34,7 +41,7 @@ namespace PROYECTO_ED1.Controllers
                 string aux = "";
                 var NewPaciente = new Models.Pacientes
                 {
-
+                    
                     Nombre = collection["nombre"],
                     DPI = collection["dpi"],
                     Edad = collection["edad"],
@@ -113,6 +120,91 @@ namespace PROYECTO_ED1.Controllers
                 return View(AuxPac);
             }
         }
+
+        public ActionResult CargarArchivo()
+        {
+            return View();
+        }
+
+        public ActionResult CargarArchivo2(IFormFile File)
+        {
+            string Nombre = "", DPI = "", Edad = "", Telefono = "", UConsul = "", PConsul = "", Diagnostico = "", Categoria = "";
+
+            try
+            {
+                if (File != null)
+                {
+                    string path = Path.Combine(this.Environment.WebRootPath, "Uploads");
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    string FileName = Path.GetFileName(File.FileName);
+                    string FilePath = Path.Combine(path, FileName);
+                    using(FileStream stream= new FileStream(FilePath, FileMode.Create))
+                    {
+                        File.CopyTo(stream);
+                    }
+                    using (TextFieldParser csvFile = new TextFieldParser(FilePath))
+                    {
+                        csvFile.CommentTokens = new string[] { "#" };
+                        csvFile.SetDelimiters(new string[] { "," });
+                        csvFile.HasFieldsEnclosedInQuotes = true;
+                        csvFile.ReadLine();
+
+                        while (!csvFile.EndOfData)
+                        {
+                            string[] fields = csvFile.ReadFields();
+                            DPI = Convert.ToString(fields[0]);
+                            Edad = Convert.ToString(fields[1]);
+                            Telefono = Convert.ToString(fields[2]);
+                            UConsul = Convert.ToString(fields[3]);
+                            PConsul= Convert.ToString(fields[4]);
+                            Diagnostico= Convert.ToString(fields[5]);
+                            Categoria= Convert.ToString(fields[6]);
+                            Pacientes NuevoPaciente = new Pacientes
+                            {
+                                Nombre = Nombre,
+                                DPI = DPI,
+                                Edad = Edad,
+                                Telefono = Telefono,
+                                FDU = Convert.ToDateTime(UConsul),
+                                FDP = Convert.ToDateTime(PConsul),
+                                Descripcion = Diagnostico,
+                                Asistencia = Categoria,
+                            };
+                            //Singleton.Instance.ListaPacientes.add(NuevoPaciente)
+                        }
+                        return RedirectToAction(nameof(Index));
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            catch(Exception)
+            {
+                ViewData["Message"] = "Algo malo paso";
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
+       /* public void LeerArchivo()
+        {
+            string RutaTXT = @"Pacientes.csv";
+            var Archivo = new StreamReader(RutaTXT);
+            {
+                string info = Archivo.ReadToEnd().Remove(0, 101);
+                foreach(string fila in info.Split("\n"))
+                {
+                    try
+                    {
+                        var NuevoPaciente = new Pacientes();
+                        {
+                            
+                        }
+                    }
+                }
+            }
+        }*/
 
         public ActionResult Busqueda_Paciente(string Busqueda)
         {

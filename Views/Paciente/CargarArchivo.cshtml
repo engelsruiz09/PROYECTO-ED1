@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "CargarArchivo";
+}
+
+<h3>Carga por CSV de Pacientes</h3>
+
+<div class="text-center">
+    <h1 class="display-3">Pacientes</h1>
+</div>
+<hr />
+
+<form asp-action="CargarArchivo2" method="post" enctype="multipart/form-data" class="form-inline mb-3 text-center">
+    <input class="form-control mb-3" type="file" name="File" />
+    <input class="btn btn-outline-primary" type="submit" value="Importar" />
+</form>
+<hr />
+<div class="text-center">
+    <p class="blockquote">
+        En esta parte de nuestra pagina tienes la opcion de cargar los pacientes que quieres insertar al sistema por medio de un archivo .CSV
+    </p>
+</div>

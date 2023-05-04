@@ -20,7 +20,16 @@ namespace PROYECTO_ED1.Controllers
         }
         public IActionResult Index_Paciente()
         {
-            return View();
+            if (Singleton.Instance.bandera == 1)
+            {
+                Singleton.Instance.bandera = 0;
+                return View(Singleton.Instance.AuxP);
+            }
+            else
+            {
+                return View(Singleton.Instance)
+            }
+            
 
             //agregar cuando 
            // return View(Singleton.Instance.miAVL.ObtenerLista());
@@ -173,17 +182,20 @@ namespace PROYECTO_ED1.Controllers
                                 Descripcion = Diagnostico,
                                 Asistencia = Categoria,
                             };
+                            Singleton.Instance.bandera = 0;
+                            Singleton.Instance.ListaPacientes.adddpi(DPI);
                             //Singleton.Instance.ListaPacientes.add(NuevoPaciente)
+                            Singleton.Instance.bandera = 0;
                         }
-                        return RedirectToAction(nameof(Index));
+                        return RedirectToAction(nameof(Index_Paciente));
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index_Paciente));
             }
             catch(Exception)
             {
                 ViewData["Message"] = "Algo malo paso";
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index_Paciente));
             }
         }
 

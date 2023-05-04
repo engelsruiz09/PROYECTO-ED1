@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wg4jkwZMuFZ4adTk+Nasjs7b9tTTIKtE4I2fkC83RLI=",
+  "Hash": "E22p1965PmI9XkmqrXsBRx5OBen6vedFbEtgNrVG2x4=",
   "Source": "PROYECTO-ED1",
   "BasePath": "_content/PROYECTO-ED1",
   "Mode": "Default",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Emilio\\Desktop\\ED 1 Lab\\Proyecto\\PROYECTO-ED1\\wwwroot\\Uploads\\PruebaLab5",
+      "SourceId": "PROYECTO-ED1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Emilio\\Desktop\\ED 1 Lab\\Proyecto\\PROYECTO-ED1\\wwwroot\\",
+      "BasePath": "_content/PROYECTO-ED1",
+      "RelativePath": "Uploads/PruebaLab5",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\PruebaLab5"
     },
     {
       "Identity": "C:\\Users\\Emilio\\Desktop\\ED 1 Lab\\Proyecto\\PROYECTO-ED1\\wwwroot\\Uploads\\PruebaProyecto.txt",

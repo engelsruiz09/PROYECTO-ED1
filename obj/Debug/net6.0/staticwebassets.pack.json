@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\PROYECTO-ED1.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Emilio\\Desktop\\ED 1 Lab\\Proyecto\\PROYECTO-ED1\\wwwroot\\Uploads\\PruebaLab5",
+      "PackagePath": "staticwebassets\\Uploads"
+    },
+    {
       "Id": "C:\\Users\\Emilio\\Desktop\\ED 1 Lab\\Proyecto\\PROYECTO-ED1\\wwwroot\\Uploads\\PruebaProyecto.txt",
       "PackagePath": "staticwebassets\\Uploads\\PruebaProyecto.txt"
     },

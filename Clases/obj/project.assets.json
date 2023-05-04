@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\julio\\.nuget\\packages\\": {},
+    "C:\\Users\\carlo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\Clases\\Clases.csproj",
+      "projectUniqueName": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\Clases\\Clases.csproj",
       "projectName": "Clases",
-      "projectPath": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\Clases\\Clases.csproj",
-      "packagesPath": "C:\\Users\\julio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\Clases\\obj\\",
+      "projectPath": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\Clases\\Clases.csproj",
+      "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
+      "outputPath": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\Clases\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

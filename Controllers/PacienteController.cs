@@ -27,12 +27,8 @@ namespace PROYECTO_ED1.Controllers
             }
             else
             {
-                return View(); //arregla esto
+                return View(Singleton.Instance.miAVL.ObtenerLista());
             }
-            
-
-            //agregar cuando 
-           // return View(Singleton.Instance.miAVL.ObtenerLista());
         }
 
         public ActionResult Create_Paciente()
@@ -163,13 +159,14 @@ namespace PROYECTO_ED1.Controllers
                         while (!csvFile.EndOfData)
                         {
                             string[] fields = csvFile.ReadFields();
-                            DPI = Convert.ToString(fields[0]);
-                            Edad = Convert.ToString(fields[1]);
-                            Telefono = Convert.ToString(fields[2]);
-                            UConsul = Convert.ToString(fields[3]);
-                            PConsul= Convert.ToString(fields[4]);
-                            Diagnostico= Convert.ToString(fields[5]);
-                            Categoria= Convert.ToString(fields[6]);
+                            Nombre = Convert.ToString(fields[0]);
+                            DPI = Convert.ToString(fields[1]);
+                            Edad = Convert.ToString(fields[2]);
+                            Telefono = Convert.ToString(fields[3]);
+                            UConsul = Convert.ToString(fields[4]);
+                            PConsul= Convert.ToString(fields[5]);
+                            Diagnostico= Convert.ToString(fields[6]);
+                            Categoria= Convert.ToString(fields[7]);
                             Pacientes NuevoPaciente = new Pacientes
                             {
                                 Nombre = Nombre,
@@ -181,10 +178,7 @@ namespace PROYECTO_ED1.Controllers
                                 Descripcion = Diagnostico,
                                 Asistencia = Categoria,
                             };
-                            Singleton.Instance.bandera = 0;
-                            Singleton.Instance.ListaPacientes.adddpi(DPI);
-                            //Singleton.Instance.ListaPacientes.add(NuevoPaciente)
-                            Singleton.Instance.bandera = 0;
+                            Singleton.Instance.miAVL.Add(NuevoPaciente);
                         }
                         return RedirectToAction(nameof(Index_Paciente));
                     }

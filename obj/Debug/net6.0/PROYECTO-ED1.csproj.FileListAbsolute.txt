@@ -293,7 +293,6 @@ C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\refint\P
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.pdb
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\appsettings.json
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\Clases\bin\Debug\net6.0\Clases.deps.json
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\Clases\obj\Clases.csproj.nuget.dgspec.json
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\Clases\obj\project.assets.json
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\PROYECTO-ED1.staticwebassets.runtime.json

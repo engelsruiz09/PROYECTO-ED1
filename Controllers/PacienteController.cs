@@ -118,9 +118,8 @@ namespace PROYECTO_ED1.Controllers
                     TempData["DRP"] = "EL dpi que desea ingresar, ya se encuentra registrado.";
                     throw new Exception(null);
                 }
-
-                //agregar cuando ya este avl
-                //Singleton.Instance.miAVL.Add(NewPaciente);
+                               
+                Singleton.Instance.miAVL.Add(NewPaciente);
                 Singleton.Instance.bandera = 0;
                 return RedirectToAction(nameof(Index_Paciente));
             }
@@ -222,31 +221,122 @@ namespace PROYECTO_ED1.Controllers
         {
             try
             {
-                //if (Busqueda != null)
-                //{
-                //   // Pacientes viewpasciente = Singleton.Instance.AVL.ObtenerLista().FirstOrDefault(a => a.Nombre == Busqueda);
-                //    if (viewpasciente == null)
-                //    {
-                //        //viewpasciente = Singleton.Instance.AVL.ObtenerLista().FirstOrDefault(a => a.DPI == Busqueda);
-                //        if (viewpasciente == null)
-                //        {
-                //            TempData["Bus"] = "No se encontro el Paciente";
-                //        }
-                //        else
-                //        {
-                //            return View(viewpasciente);
-                //        }
-                //    }
-                //    else
-                //    {
-                //        return View(viewpasciente);
-                //    }
-                //}
+                if (Busqueda != null)
+                {
+                    Pacientes viewpasciente = Singleton.Instance.miAVL.ObtenerLista().FirstOrDefault(a => a.Nombre == Busqueda);
+                    if (viewpasciente == null)
+                    {
+                        viewpasciente = Singleton.Instance.miAVL.ObtenerLista().FirstOrDefault(a => a.DPI == Busqueda);
+                        if (viewpasciente == null)
+                        {
+                            TempData["Bus"] = "No se encontro el Paciente";
+                        }
+                        else
+                        {
+                            return View(viewpasciente);
+                        }
+                    }
+                    else
+                    {
+                        return View(viewpasciente);
+                    }
+                }
                 return View();
             }
             catch
             {
                 TempData["Bus"] = "No se encontro el Paciente";
+                return View();
+            }
+        }
+        public ActionResult RegistrarConsulta()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult RegistrarConsulta(IFormCollection collection)
+        {           
+          int cont = 0;//contador para fechas
+            try
+            {
+                Consulta consulta = new Models.Consulta //se crea nueva consulta con el paciente y la fecha
+                {
+                    paciente = Singleton.Instance.miAVL.ObtenerLista().FirstOrDefault(a => a.DPI == collection["DPI"]),//se busca al paciente en el avl 
+                    fecha = Convert.ToDateTime(collection["FDP"])//se agrega la fecha de la consulta
+                };
+                
+                foreach (var con in Singleton.Instance.Consultas)
+                {
+                    if (con.fecha == consulta.fecha)
+                    {
+                        cont++;
+                    }
+                }
+                if (cont <= 12)
+                {
+                    TempData["FEC"] = "Ya no se pueden atender mas pacientes en esa fecha, porfavor ingrese otra.";
+                    throw new Exception(null);
+                }
+                else
+                {
+                    Singleton.Instance.Consultas.Add(consulta);
+                }
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+            catch (Exception)
+            {
+
+                throw;
+                return View();
+            }
+        }
+
+        public ActionResult ModificarConsulta(IFormCollection collection)
+        {
+            int cont = 0;//contador para fechas
+            try
+            {
+                Consulta consulta = new Models.Consulta //se crea nueva consulta con el paciente y la fecha
+                {
+                    paciente = Singleton.Instance.miAVL.ObtenerLista().FirstOrDefault(a => a.DPI == collection["DPI"]),//se busca al paciente en el avl 
+                    fecha = Convert.ToDateTime(collection["FUP"])//se agrega la fecha de la consulta
+                };
+                foreach (var c  in Singleton.Instance.Consultas)
+                {
+                    if (c == consulta)
+                    {
+                        foreach (var con in Singleton.Instance.Consultas)
+                        {
+                            if (con.fecha == consulta.fecha)
+                            {
+                                cont++;
+                            }
+                        }
+                        if (cont <= 12)
+                        {
+                            TempData["FEC"] = "Ya no se pueden atender mas pacientes en esa fecha, porfavor ingrese otra.";
+                            throw new Exception(null);
+                        }
+                        else
+                        {
+                            consulta.fecha = Convert.ToDateTime(collection["FDP"]);
+                            Singleton.Instance.Consultas.Remove(c);
+                            Singleton.Instance.Consultas.Add(consulta);
+                        }
+                    }
+                    else
+                    {
+                        TempData["NEP"] = "No exista la consulta que quiere modificar, porfavor revise sus datos.";
+                        throw new Exception(null);
+                    }
+                }
+                
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+            catch (Exception)
+            {
+
+                throw;
                 return View();
             }
         }

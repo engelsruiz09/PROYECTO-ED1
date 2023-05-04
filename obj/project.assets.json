@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\julio\\.nuget\\packages\\": {},
+    "C:\\Users\\eddie\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
+      "projectUniqueName": "C:\\Users\\eddie\\OneDrive - Universidad Rafael Landivar\\U\\Año 5\\Primer Ciclo\\Estructura de Datos 1 (lab)\\Proyecto\\2\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
       "projectName": "PROYECTO-ED1",
-      "projectPath": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
-      "packagesPath": "C:\\Users\\julio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\julio\\Desktop\\PROYECTO-ED1\\obj\\",
+      "projectPath": "C:\\Users\\eddie\\OneDrive - Universidad Rafael Landivar\\U\\Año 5\\Primer Ciclo\\Estructura de Datos 1 (lab)\\Proyecto\\2\\PROYECTO-ED1\\PROYECTO-ED1.csproj",
+      "packagesPath": "C:\\Users\\eddie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\eddie\\OneDrive - Universidad Rafael Landivar\\U\\Año 5\\Primer Ciclo\\Estructura de Datos 1 (lab)\\Proyecto\\2\\PROYECTO-ED1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\eddie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -70,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

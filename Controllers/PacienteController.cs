@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PROYECTO_ED1.Models;
 using PROYECTO_ED1.Models.Data;
+using System;
 
 namespace PROYECTO_ED1.Controllers
 {
@@ -144,6 +145,46 @@ namespace PROYECTO_ED1.Controllers
             {
                 TempData["Bus"] = "No se encontro el Paciente";
                 return View();
+            }
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Filtro2()
+        {
+            string Cognitivo = "Cognitivo";
+            string Conductual = "Conductual";
+            try
+            {
+                Singleton.Instance.bandera = 1;
+                Singleton.Instance.AuxP = Singleton.Instance.AVL.Obtener2(a => a.Descripcion == Cognitivo, b => b.Descripcion == Conductual, p => (DateTime.Now - p.FDU).TotalDays > 30);
+                int a = Singleton.Instance.AVL.GetComparaciones();
+                TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+            catch (Exception)
+            {
+                Singleton.Instance.bandera = 0;
+                ViewData["Message"] = "No Encontrado";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+        }
+        public ActionResult Filtro4()
+        {
+            string Logoterapia = "Logoterapia";
+            string Psicodinamica = "Psicodinámica";
+            try
+            {
+                Singleton.Instance.bandera = 1;
+                Singleton.Instance.AuxP = Singleton.Instance.AVL.Obtener2(a => a.Descripcion == Logoterapia, b => b.Descripcion == Psicodinamica, p => (DateTime.Now - p.FDU).TotalDays > 14);
+                int a = Singleton.Instance.AVL.GetComparaciones();
+                TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+            catch (Exception)
+            {
+                Singleton.Instance.bandera = 0;
+                ViewData["Message"] = "No Encontrado";
+                return RedirectToAction(nameof(Index_Paciente));
             }
         }
     }

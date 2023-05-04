@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Clases
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\samer\Documents\GitHub\PROYECTO-ED1\Clases\
+=======
+build_property.ProjectDir = E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\Clases\
+>>>>>>> develop

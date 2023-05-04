@@ -27,7 +27,7 @@ namespace PROYECTO_ED1.Controllers
             }
             else
             {
-                return View(Singleton.Instance)
+                return View(); //arregla esto
             }
             
 

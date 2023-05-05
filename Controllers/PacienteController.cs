@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic.FileIO;
-
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace PROYECTO_ED1.Controllers
 {
@@ -30,6 +30,11 @@ namespace PROYECTO_ED1.Controllers
             {
                 Singleton.Instance.bandera = 0;
                 return View(Singleton.Instance.Consultas);
+            }
+            else if (Singleton.Instance.bandera == 3)
+            {
+                Singleton.Instance.bandera = 0;
+                return View(Singleton.Instance.Aux);
             }
             else
             {
@@ -259,14 +264,50 @@ namespace PROYECTO_ED1.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public ActionResult Filtro1()
+        {
+            string SinTratamiento = "";
+            try
+            {
+                Singleton.Instance.bandera = 3;
+                Singleton.Instance.Aux = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == SinTratamiento, p => (DateTime.Now - p.FDU).TotalDays > 180);
+                int a = Singleton.Instance.miAVL.GetComparaciones();
+                TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+            catch (Exception)
+            {
+                Singleton.Instance.bandera = 0;
+                ViewData["Message"] = "No Encontrado";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+        }
         public ActionResult Filtro2()
         {
             string Cognitivo = "Cognitivo";
             string Conductual = "Conductual";
             try
             {
-                Singleton.Instance.bandera = 1;
-                //Singleton.Instance.AuxP = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Cognitivo, b => b.Descripcion == Conductual, p => (DateTime.Now - p.FDU).TotalDays > 30);
+                Singleton.Instance.bandera = 3;
+                Singleton.Instance.Aux = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Cognitivo || a.Descripcion == Conductual, p => (DateTime.Now - p.FDU).TotalDays > 30);
+                int a = Singleton.Instance.miAVL.GetComparaciones();
+                TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+            catch (Exception)
+            {
+                Singleton.Instance.bandera = 0;
+                ViewData["Message"] = "No Encontrado";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+        }
+        public ActionResult Filtro3()
+        {
+            string Gestaltica = "Gestaltica";
+            try
+            {
+                Singleton.Instance.bandera = 3;
+                Singleton.Instance.Aux = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Gestaltica, p => (DateTime.Now - p.FDU).TotalDays > 60);
                 int a = Singleton.Instance.miAVL.GetComparaciones();
                 TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
                 return RedirectToAction(nameof(Index_Paciente));
@@ -327,8 +368,8 @@ namespace PROYECTO_ED1.Controllers
             string Psicodinamica = "Psicodinámica";
             try
             {
-                Singleton.Instance.bandera = 1;
-                //Singleton.Instance.AuxP = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Logoterapia, b => b.Descripcion == Psicodinamica, p => (DateTime.Now - p.FDU).TotalDays > 14);
+                Singleton.Instance.bandera = 3;
+                Singleton.Instance.Aux = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Logoterapia || a.Descripcion == Psicodinamica, p => (DateTime.Now - p.FDU).TotalDays > 30);
                 int a = Singleton.Instance.miAVL.GetComparaciones();
                 TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
                 return RedirectToAction(nameof(Index_Paciente));

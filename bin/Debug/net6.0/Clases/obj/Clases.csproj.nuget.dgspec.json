@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\Clases\\Clases.csproj": {}
+    "C:\\Users\\eddie\\OneDrive - Universidad Rafael Landivar\\U\\Año 5\\Primer Ciclo\\Estructura de Datos 1 (lab)\\Proyecto\\4\\PROYECTO-ED1\\Clases\\Clases.csproj": {}
   },
   "projects": {
-    "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\Clases\\Clases.csproj": {
+    "C:\\Users\\eddie\\OneDrive - Universidad Rafael Landivar\\U\\Año 5\\Primer Ciclo\\Estructura de Datos 1 (lab)\\Proyecto\\4\\PROYECTO-ED1\\Clases\\Clases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\Clases\\Clases.csproj",
+        "projectUniqueName": "C:\\Users\\eddie\\OneDrive - Universidad Rafael Landivar\\U\\Año 5\\Primer Ciclo\\Estructura de Datos 1 (lab)\\Proyecto\\4\\PROYECTO-ED1\\Clases\\Clases.csproj",
         "projectName": "Clases",
-        "projectPath": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\Clases\\Clases.csproj",
-        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-        "outputPath": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\Clases\\obj\\",
+        "projectPath": "C:\\Users\\eddie\\OneDrive - Universidad Rafael Landivar\\U\\Año 5\\Primer Ciclo\\Estructura de Datos 1 (lab)\\Proyecto\\4\\PROYECTO-ED1\\Clases\\Clases.csproj",
+        "packagesPath": "C:\\Users\\eddie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eddie\\OneDrive - Universidad Rafael Landivar\\U\\Año 5\\Primer Ciclo\\Estructura de Datos 1 (lab)\\Proyecto\\4\\PROYECTO-ED1\\Clases\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eddie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

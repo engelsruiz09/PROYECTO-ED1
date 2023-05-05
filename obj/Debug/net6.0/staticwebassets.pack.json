@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\PROYECTO-ED1.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Emilio\\Desktop\\ED 1 Lab\\Proyecto\\PROYECTO-ED1\\wwwroot\\Uploads\\Prueba2.csv",
+      "PackagePath": "staticwebassets\\Uploads\\Prueba2.csv"
+    },
+    {
+      "Id": "C:\\Users\\Emilio\\Desktop\\ED 1 Lab\\Proyecto\\PROYECTO-ED1\\wwwroot\\Uploads\\Prueba2.txt",
+      "PackagePath": "staticwebassets\\Uploads\\Prueba2.txt"
+    },
+    {
       "Id": "C:\\Users\\Emilio\\Desktop\\ED 1 Lab\\Proyecto\\PROYECTO-ED1\\wwwroot\\Uploads\\PruebaLab5",
       "PackagePath": "staticwebassets\\Uploads"
+    },
+    {
+      "Id": "C:\\Users\\Emilio\\Desktop\\ED 1 Lab\\Proyecto\\PROYECTO-ED1\\wwwroot\\Uploads\\PruebaProyecto.csv",
+      "PackagePath": "staticwebassets\\Uploads\\PruebaProyecto.csv"
     },
     {
       "Id": "C:\\Users\\Emilio\\Desktop\\ED 1 Lab\\Proyecto\\PROYECTO-ED1\\wwwroot\\Uploads\\PruebaProyecto.txt",

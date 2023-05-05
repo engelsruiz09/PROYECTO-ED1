@@ -165,8 +165,8 @@ namespace PROYECTO_ED1.Controllers
                             Telefono = Convert.ToString(fields[3]);
                             UConsul = Convert.ToString(fields[4]);
                             PConsul= Convert.ToString(fields[5]);
-                            Diagnostico= Convert.ToString(fields[6]);
-                            Categoria= Convert.ToString(fields[7]);
+                            Categoria = Convert.ToString(fields[6]);
+                            Diagnostico= Convert.ToString(fields[7]);
                             Pacientes NuevoPaciente = new Pacientes
                             {
                                 Nombre = Nombre,
@@ -175,12 +175,11 @@ namespace PROYECTO_ED1.Controllers
                                 Telefono = Telefono,
                                 FDU = Convert.ToDateTime(UConsul),
                                 FDP = Convert.ToDateTime(PConsul),
-                                Descripcion = Diagnostico,
                                 Asistencia = Categoria,
+                                Descripcion = Diagnostico,
                             };
                             Singleton.Instance.miAVL.Add(NuevoPaciente);
                         }
-                        return RedirectToAction(nameof(Index_Paciente));
                     }
                 }
                 return RedirectToAction(nameof(Index_Paciente));

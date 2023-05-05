@@ -280,17 +280,6 @@ E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\scope
 E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.csproj.CopyComplete
 E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.genruntimeconfig.cache
 E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\ref\PROYECTO-ED1.dll
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.csproj.AssemblyReference.cache
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.AssemblyInfoInputs.cache
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.AssemblyInfo.cs
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.csproj.CoreCompileInputs.cache
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.RazorAssemblyInfo.cache
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.RazorAssemblyInfo.cs
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.dll
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\refint\PROYECTO-ED1.dll
-C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.pdb
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\appsettings.json
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\Clases\obj\Clases.csproj.nuget.dgspec.json
@@ -516,6 +505,14 @@ C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\runtimes
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.csproj.AssemblyReference.cache
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.AssemblyInfoInputs.cache
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.AssemblyInfo.cs
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.csproj.CoreCompileInputs.cache
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.RazorAssemblyInfo.cache
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.RazorAssemblyInfo.cs
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\staticwebassets\msbuild.PROYECTO-ED1.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\staticwebassets\msbuild.build.PROYECTO-ED1.props
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.PROYECTO-ED1.props
@@ -527,5 +524,9 @@ C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\scopedcs
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\scopedcss\bundle\PROYECTO-ED1.styles.css
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\scopedcss\projectbundle\PROYECTO-ED1.bundle.scp.css
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.csproj.CopyComplete
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.dll
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\refint\PROYECTO-ED1.dll
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.pdb
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.genruntimeconfig.cache
 C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\obj\Debug\net6.0\ref\PROYECTO-ED1.dll
+C:\Users\Emilio\Desktop\ED 1 Lab\Proyecto\PROYECTO-ED1\bin\Debug\net6.0\Clases\bin\Debug\net6.0\Clases.deps.json

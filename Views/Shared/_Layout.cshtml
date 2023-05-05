@@ -27,25 +27,25 @@
                     <li class="nav-item">
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Pacientes
+                                Manejo de Pacientes
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item " asp-controller="Paciente" asp-action="Index_Paciente">Ver Pacientes</a>
-                                <a class="dropdown-item " asp-controller="Paciente" asp-action="Create_Paciente">Añadir Pacientes</a>
+                                <a class="dropdown-item " asp-controller="Paciente" asp-action="CargarArchivo">Añadir Pacientes por CSV</a>
+                                <a class="dropdown-item " asp-controller="Paciente" asp-action="Create_Paciente">Añadir Pacientes Manual</a>
                                 <a class="dropdown-item " asp-controller="Paciente" asp-action="Busqueda_Paciente">Buscar Pacientes</a>
-                                <a class="dropdown-item " asp-controller="Paciente" asp-action="CargarArchivo">Archivo Pacientes</a>
-
                             </div>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Consulta médica
+                                Manejo de Consultas
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" asp-controller="Paciente" asp-action="Index">Sala de espera</a>
-                                <a class="dropdown-item" asp-controller="Paciente" asp-action="Index">Historial de pacientes atendidos</a>
+                                <a class="dropdown-item" asp-controller="Paciente" asp-action="RegistrarConsulta">Registrar Consulta</a>
+                                <a class="dropdown-item" asp-controller="Paciente" asp-action="ModificarConsulta">Modificar Consulta</a>
+                                <a class="dropdown-item" asp-controller="Paciente" asp-action="Consultas">Ver Consultas</a>
                             </div>
                         </div>
                     </li>

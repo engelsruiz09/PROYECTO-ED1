@@ -1,0 +1,54 @@
+﻿@model IEnumerable<PROYECTO_ED1.Models.Consulta>
+
+@{
+    ViewData["Title"] = "Consultas";
+}
+
+<h1 class="text-center display-2">Consultas</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.paciente.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.paciente.DPI)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fecha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.paciente.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.paciente.DPI)
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

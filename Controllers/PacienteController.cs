@@ -26,10 +26,24 @@ namespace PROYECTO_ED1.Controllers
                 Singleton.Instance.bandera = 0;
                 return View(Singleton.Instance.AuxP);
             }
+            else if (Singleton.Instance.bandera == 2)
+            {
+                Singleton.Instance.bandera = 0;
+                return View(Singleton.Instance.Consultas);
+            }
             else
             {
                 return View(Singleton.Instance.miAVL.ObtenerLista());
             }
+        }
+
+        public ActionResult Consultas() {
+            if (Singleton.Instance.bandera == 2)
+            {
+                Singleton.Instance.bandera = 0;
+                return View(Singleton.Instance.Consultas);
+            }
+            return View();
         }
 
         public ActionResult Create_Paciente()
@@ -288,7 +302,7 @@ namespace PROYECTO_ED1.Controllers
                         cont++;
                     }
                 }
-                if (cont <= 12)
+                if (cont >= 12)
                 {
                     TempData["FEC"] = "Ya no se pueden atender mas pacientes en esa fecha, porfavor ingrese otra.";
                     throw new Exception(null);
@@ -296,14 +310,15 @@ namespace PROYECTO_ED1.Controllers
                 else
                 {
                     Singleton.Instance.Consultas.Add(consulta);
+                    Singleton.Instance.bandera = 2;
                 }
-                return RedirectToAction(nameof(Index_Paciente));
+                return RedirectToAction(nameof(Consultas));
             }
             catch (Exception)
             {
                 Singleton.Instance.bandera = 0;
                 ViewData["Message"] = "No Encontrado";
-                return RedirectToAction(nameof(Index_Paciente));
+                return RedirectToAction(nameof(Consultas));
             }
         }
         public ActionResult Filtro4()
@@ -326,6 +341,12 @@ namespace PROYECTO_ED1.Controllers
             }
         }
 
+        public ActionResult ModificarConsulta()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult ModificarConsulta(IFormCollection collection)
         {
             int cont = 0;//contador para fechas
@@ -357,6 +378,7 @@ namespace PROYECTO_ED1.Controllers
                             consulta.fecha = Convert.ToDateTime(collection["FDP"]);
                             Singleton.Instance.Consultas.Remove(c);
                             Singleton.Instance.Consultas.Add(consulta);
+                            Singleton.Instance.bandera = 2;
                         }
                     }
                     else
@@ -365,13 +387,13 @@ namespace PROYECTO_ED1.Controllers
                         throw new Exception(null);
                     }
                 }
-                return RedirectToAction(nameof(Index_Paciente));
+                return RedirectToAction(nameof(Consultas));
             }
             catch (Exception)
             {
                 Singleton.Instance.bandera = 0;
                 ViewData["Message"] = "No Encontrado";
-                return RedirectToAction(nameof(Index_Paciente));
+                return RedirectToAction(nameof(Consultas));
             }
         }
     }

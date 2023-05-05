@@ -1,90 +1,77 @@
-﻿@model Proyecto_Grupo2.Models.Paciente
+﻿@model IEnumerable<PROYECTO_ED1.Models.Pacientes>
 
 @{
-    ViewData["Title"] = "Buscador";
+    ViewData["Title"] = "Busqueda_Paciente";
 }
 
-<div class="form-inline">
-    <div class="container-fluid h-100">
-        <div class="row w-100 align-items-center">
-            <div class="col text-center">
-                <div class="titulo">
-                    <br /><br /><br />
-                    <h3 style="text-align:center;">Buscar paciente</h3>
-                    <hr style="width: 5%; height: 5px; background-color: #BCD8D9;">
-                </div>
-                <form asp-action="Busqueda_Paciente" method="post">
-                    <input name="Busqueda" type="search" class="form-control me-2 mx-auto d-block" placeholder="Ingrese Nombre o DPI" />
-                    <br />
-                    <button type="submit" class="btn btn-outline-success">
-                        Buscar
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+<h1>Busqueda_Paciente</h1>
 
-<div class="container-fluid h-100">
-    <div class="row w-100 align-items-center">
-        <div class="col text-center">
-            <div style="text-align:justify;">
-                <dl class="row">
-                    <dt class="col-sm-2">
-                        @Html.DisplayNameFor(model => model.Nombre)
-                    </dt>
-                    <dd class="col-sm-10">
-                        @Html.DisplayFor(model => model.Nombre)
-                    </dd>
-                    <dt class="col-sm-2">
-                        @Html.DisplayNameFor(model => model.DPI)
-                    </dt>
-                    <dd class="col-sm-10">
-                        @Html.DisplayFor(model => model.DPI)
-                    </dd>
-                    <dt class="col-sm-2">
-                        @Html.DisplayNameFor(model => model.Edad)
-                    </dt>
-                    <dd class="col-sm-10">
-                        @Html.DisplayFor(model => model.Edad)
-                    </dd>
-                    <dt class="col-sm-2">
-                        @Html.DisplayNameFor(model => model.Telefono)
-                    </dt>
-                    <dd class="col-sm-10">
-                        @Html.DisplayFor(model => model.Telefono)
-                    </dd>
-                    <dt class="col-sm-2">
-                        @Html.DisplayNameFor(model => model.FDU)
-                    </dt>
-                    <dd class="col-sm-10">
-                        @Html.DisplayFor(model => model.FDU)
-                    </dd>
-                    <dt class="col-sm-2">
-                        @Html.DisplayNameFor(model => model.FDP)
-                    </dt>
-                    <dd class="col-sm-10">
-                        @Html.DisplayFor(model => model.FDP)
-                    </dd>
-                    <dt class="col-sm-2">
-                        @Html.DisplayNameFor(model => model.Descripcion)
-                    </dt>
-                    <dd class="col-sm-10">
-                        @Html.DisplayFor(model => model.Descripcion)
-                    </dd>
-                </dl>
-            </div>
-
-            <div style="text-align:right; margin-right:50px;">
-                @Html.ActionLink("Editar", "Edit_Paciente", Model)  | <a asp-action="Index_Paciente" style="color: #246569;">Historial de pacientes</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-@if (null != TempData["Bus"])
-{
-    <script type="text/javascript">
-        alert('@TempData["Bus"]');
-    </script>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DPI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Edad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FDU)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FDP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asistencia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DPI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FDU)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FDP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Asistencia)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
 }
+    </tbody>
+</table>

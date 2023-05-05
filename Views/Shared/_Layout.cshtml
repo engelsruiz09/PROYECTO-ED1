@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="~/icon.png">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                </svg>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -19,28 +25,29 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <a asp-controller="Home" asp-action="Index"></a>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="About">Conócenos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Tratamientos">Tratamientos</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                            Programar cita
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" asp-controller="Paciente" asp-action="Create_Paciente">Nuevo paciente</a>
-                            <a class="dropdown-item" asp-controller="Paciente" asp-action="Busqueda_Paciente">Buscar paciente</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" asp-controller="Paciente" asp-action="Index_Paciente">Historial de pacientes</a>
-                            <a class="dropdown-item" asp-controller="Paciente" asp-action="Seguimiento_Paciente">Seguimiento de pacientes</a>
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Pacientes
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item " asp-controller="Paciente" asp-action="Index_Paciente">Ver Pacientes</a>
+                                <a class="dropdown-item " asp-controller="Paciente" asp-action="Create_Paciente">Añadir Pacientes</a>
+                                <a class="dropdown-item " asp-controller="Paciente" asp-action="Busqueda_Paciente">Buscar Pacientes</a>
+                                <a class="dropdown-item " asp-controller="Paciente" asp-action="CargarArchivo">Archivo Pacientes</a>
 
+                            </div>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Contacto">Contacto</a>
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Consulta médica
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" asp-controller="Paciente" asp-action="Index">Sala de espera</a>
+                                <a class="dropdown-item" asp-controller="Paciente" asp-action="Index">Historial de pacientes atendidos</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -52,12 +59,16 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Mente Sana | Mente Sana 
+            <p class="text-dark">
+                &copy; 2023 - Mente Sana | Todos los derechos reservados. <br />Guatemala, Guatemala, zona 9.
+            </p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

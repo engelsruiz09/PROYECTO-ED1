@@ -1,89 +1,104 @@
 ﻿@model PROYECTO_ED1.Models.Pacientes
 
 @{
-    ViewData["Title"] = "Nuevo paciente";
+    ViewData["Title"] = "Create_Paciente";
 }
-<div class="titulo">
-    <br /><br /><br />
-    <h3 style="text-align:center;">Nuevo paciente</h3>
-    <hr style="width: 5%; text-align: center; height: 5px; background-color: #BCD8D9;">
-</div>
+<div class="fondo-create">
+    <div class="espacio">
+       <p class="display-1 text-center text-light">Nuevo Paciente</p>
+    </div>
 
-<div class="row; col-auto p-5">
-    <div>
-        <form asp-action="Create_Paciente">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
+    <div class="container bg-light p-5 ">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well well-sm">
+                    <form class="form-horizontal" asp-action="Create_Paciente" method="post">
+                        <fieldset>
+                            <legend class="text-center header">Crea un Nuevo Paciente</legend>
+
+                            <div class="form-group mb-2">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-12">
+                                    <label asp-for="Nombre" class="control-label"></label>
+                                    <input asp-for="Nombre" class="form-control" />
+                                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group mb-2">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                <div class="col-md-12">
+                                    <label asp-for="DPI" class="control-label"></label>
+                                    <input asp-for="DPI" class="form-control" />
+                                    <span asp-validation-for="DPI" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                                <div class="col-md-12">
+                                    <label asp-for="Edad" class="control-label"></label>
+                                    <input asp-for="Edad" class="form-control" />
+                                    <span asp-validation-for="Edad" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                <div class="col-md-12">
+                                    <label asp-for="Telefono" class="control-label"></label>
+                                    <input asp-for="Telefono" class="form-control" />
+                                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                                <div class="col-md-12">
+                                    <label asp-for="FDU" class="control-label"></label>
+                                    <input asp-for="FDU" class="form-control" />
+                                    <span asp-validation-for="FDU" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                                <div class="col-md-12">
+                                    <label asp-for="FDP" class="control-label"></label>
+                                    <input asp-for="FDP" class="form-control" />
+                                    <span asp-validation-for="FDP" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                                <div class="col-md-12">
+                                    <label asp-for="Descripcion" class="control-label"></label>
+                                    <input asp-for="Descripcion" class="form-control" />
+                                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-5">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                                <div class="col-md-12">
+                                    <label asp-for="Asistencia" class="control-label"></label>
+                                    <input asp-for="Asistencia" class="form-control" />
+                                    <span asp-validation-for="Asistencia" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <input type="submit" value="Crear Paciente" class="btn btn-primary" />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="DPI" class="control-label"></label>
-                <input asp-for="DPI" class="form-control" />
-                <span asp-validation-for="DPI" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Edad" class="control-label"></label>
-                <input asp-for="Edad" class="form-control" />
-                <span asp-validation-for="Edad" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Telefono" class="control-label"></label>
-                <input asp-for="Telefono" class="form-control" />
-                <span asp-validation-for="Telefono" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FDU" class="control-label"></label>
-                <input asp-for="FDU" class="form-control" />
-                <span asp-validation-for="FDU" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FDP" class="control-label"></label>
-                <input asp-for="FDP" class="form-control" />
-                <span asp-validation-for="FDP" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Descripcion" class="control-label"></label>
-                <input asp-for="Descripcion" class="form-control" />
-                <span asp-validation-for="Descripcion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Agregar paciente" class="btn btn-info" />
-            </div>
-        </form>
+        </div>
+    </div>
+
+    <div class="">
+        <a asp-action="Index" class="btn btn-info text-light">Regresar a la lista</a>
     </div>
 </div>
-
-<div style="text-align:right; margin-right:50px;">
-    <a asp-action="Index_Paciente" style="color: #246569;">Historial de pacientes</a>
-</div>
-<br />
-<br />
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
-
-@if (null != TempData["VOP"])//Validacion de 8 personas por día
-{
-    <script type="text/javascript">
-        alert('@TempData["VOP"]');
-    </script>
-}
-
-@if (null != TempData["DRP"])//Mensaje de validacion de dpi repetido
-{
-    <script type="text/javascript">
-        alert('@TempData["DRP"]');
-    </script>
-}
-
-@if (null != TempData["Fec"])//Mensaje de validacion de fecha pasada a la actual
-{
-    <script type="text/javascript">
-        alert('@TempData["Fec"]');
-    </script>
-}

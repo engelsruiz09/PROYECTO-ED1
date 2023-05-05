@@ -8,7 +8,6 @@ namespace Clases
 {
     public  class AVL <T> where T : IComparable<T>
     {
-
         private Nodo<T> Raiz = new Nodo<T>(); //nodo raiz del arbol
         private Nodo<T> temp = new Nodo<T>(); //nodo temporal, se usa para metodos
         private List<T> listaOrdenada = new List<T>(); //guarda los valores del arbol en una lista
@@ -42,6 +41,7 @@ namespace Clases
             {
                 nodo.elvalor = nodo.Nodoizquierdo.elvalor;//el hijo izquierdo pasa a la posicion del nodo a eliminar
                 nodo.Nododerecho = nodo.Nodoizquierdo.Nododerecho;
+
                 nodo.Nodoizquierdo = nodo.Nodoizquierdo.Nodoizquierdo;
             }
             else // Caso 3, el nodo tiene dos hijos
@@ -359,7 +359,6 @@ namespace Clases
             DateTime Fecha = DateTime.Now;
             return Fecha;
         }
-
         public int GetComparaciones()//metodo que devuelve la cantidad de comparaciones que se hicieron
         {
             return comparaciones;

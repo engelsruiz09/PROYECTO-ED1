@@ -28,12 +28,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcQnVzcXVlZGFfUGFjaWVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Carlos/source/repos/Estructura de Datos I/PROYECTO-ED1/Views/Paciente/CargarArchivo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcQ2FyZ2FyQXJjaGl2by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Carlos/source/repos/Estructura de Datos I/PROYECTO-ED1/Views/Paciente/Create_Paciente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcQ3JlYXRlX1BhY2llbnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Carlos/source/repos/Estructura de Datos I/PROYECTO-ED1/Views/Paciente/Index_Paciente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcSW5kZXhfUGFjaWVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Carlos/source/repos/Estructura de Datos I/PROYECTO-ED1/Views/Paciente/ModificarConsulta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcTW9kaWZpY2FyQ29uc3VsdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Carlos/source/repos/Estructura de Datos I/PROYECTO-ED1/Views/Paciente/RegistrarConsulta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcUmVnaXN0cmFyQ29uc3VsdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Carlos/source/repos/Estructura de Datos I/PROYECTO-ED1/Views/Shared/Error.cshtml]

@@ -4,9 +4,11 @@
     ViewData["Title"] = "Busqueda_Paciente";
 }
 
+<h1>Busqueda_Paciente</h1>
 
-<h1 class="display-1 text-center">Listado de Pacientes</h1>
-
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
 <table class="table">
     <thead>
         <tr>
@@ -38,7 +40,8 @@
         </tr>
     </thead>
     <tbody>
-        @if(Model != null){
+        @if (Model != null)
+        {
             @foreach (var item in Model)
             {
                 <tr>
@@ -74,38 +77,31 @@
                 </tr>
             }
         }
-        else{
-                               <tr>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
+        else
+        {
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
                     @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                     @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                     @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                        </td>
-                    </tr>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

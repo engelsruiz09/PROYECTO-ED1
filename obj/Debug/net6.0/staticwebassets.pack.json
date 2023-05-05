@@ -5,36 +5,24 @@
       "PackagePath": "staticwebassets\\PROYECTO-ED1.bundle.scp.css"
     },
     {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\css\\mdb.dark.min.css",
-      "PackagePath": "staticwebassets\\css\\mdb.dark.min.css"
+      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\Uploads\\Prueba2.csv",
+      "PackagePath": "staticwebassets\\Uploads\\Prueba2.csv"
     },
     {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\css\\mdb.dark.min.css.map",
-      "PackagePath": "staticwebassets\\css\\mdb.dark.min.css.map"
+      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\Uploads\\Prueba2.txt",
+      "PackagePath": "staticwebassets\\Uploads\\Prueba2.txt"
     },
     {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\css\\mdb.dark.rtl.min.css",
-      "PackagePath": "staticwebassets\\css\\mdb.dark.rtl.min.css"
+      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\Uploads\\PruebaLab5",
+      "PackagePath": "staticwebassets\\Uploads"
     },
     {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\css\\mdb.dark.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\css\\mdb.dark.rtl.min.css.map"
+      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\Uploads\\PruebaProyecto.csv",
+      "PackagePath": "staticwebassets\\Uploads\\PruebaProyecto.csv"
     },
     {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\css\\mdb.min.css",
-      "PackagePath": "staticwebassets\\css\\mdb.min.css"
-    },
-    {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\css\\mdb.min.css.map",
-      "PackagePath": "staticwebassets\\css\\mdb.min.css.map"
-    },
-    {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\css\\mdb.rtl.min.css",
-      "PackagePath": "staticwebassets\\css\\mdb.rtl.min.css"
-    },
-    {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\css\\mdb.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\css\\mdb.rtl.min.css.map"
+      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\Uploads\\PruebaProyecto.txt",
+      "PackagePath": "staticwebassets\\Uploads\\PruebaProyecto.txt"
     },
     {
       "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\css\\site.css",
@@ -57,12 +45,8 @@
       "PackagePath": "staticwebassets\\img\\bannerP1.jpg"
     },
     {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\js\\mdb.min.js",
-      "PackagePath": "staticwebassets\\js\\mdb.min.js"
-    },
-    {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\js\\mdb.min.js.map",
-      "PackagePath": "staticwebassets\\js\\mdb.min.js.map"
+      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\img\\fondo-create.jpg",
+      "PackagePath": "staticwebassets\\img\\fondo-create.jpg"
     },
     {
       "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\js\\site.js",

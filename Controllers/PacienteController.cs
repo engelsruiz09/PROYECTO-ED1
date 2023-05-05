@@ -252,8 +252,8 @@ namespace PROYECTO_ED1.Controllers
             try
             {
                 Singleton.Instance.bandera = 1;
-                Singleton.Instance.AuxP = Singleton.Instance.AVL.Obtener2(a => a.Descripcion == Cognitivo, b => b.Descripcion == Conductual, p => (DateTime.Now - p.FDU).TotalDays > 30);
-                int a = Singleton.Instance.AVL.GetComparaciones();
+                //Singleton.Instance.AuxP = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Cognitivo, b => b.Descripcion == Conductual, p => (DateTime.Now - p.FDU).TotalDays > 30);
+                int a = Singleton.Instance.miAVL.GetComparaciones();
                 TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
                 return RedirectToAction(nameof(Index_Paciente));
             }
@@ -313,12 +313,16 @@ namespace PROYECTO_ED1.Controllers
             try
             {
                 Singleton.Instance.bandera = 1;
-                Singleton.Instance.AuxP = Singleton.Instance.AVL.Obtener2(a => a.Descripcion == Logoterapia, b => b.Descripcion == Psicodinamica, p => (DateTime.Now - p.FDU).TotalDays > 14);
-                int a = Singleton.Instance.AVL.GetComparaciones();
+                //Singleton.Instance.AuxP = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Logoterapia, b => b.Descripcion == Psicodinamica, p => (DateTime.Now - p.FDU).TotalDays > 14);
+                int a = Singleton.Instance.miAVL.GetComparaciones();
                 TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
-
-                throw;
-                return View();
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+            catch (Exception)
+            {
+                Singleton.Instance.bandera = 0;
+                ViewData["Message"] = "No Encontrado";
+                return RedirectToAction(nameof(Index_Paciente));
             }
         }
 

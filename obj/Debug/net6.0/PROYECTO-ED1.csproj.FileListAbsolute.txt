@@ -31,3 +31,36 @@ C:\Users\julio\Desktop\PROYECTO-ED1\obj\Debug\net6.0\refint\PROYECTO-ED1.dll
 C:\Users\julio\Desktop\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.pdb
 C:\Users\julio\Desktop\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.genruntimeconfig.cache
 C:\Users\julio\Desktop\PROYECTO-ED1\obj\Debug\net6.0\ref\PROYECTO-ED1.dll
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.csproj.AssemblyReference.cache
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.GeneratedMSBuildEditorConfig.editorconfig
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.AssemblyInfoInputs.cache
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.AssemblyInfo.cs
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.csproj.CoreCompileInputs.cache
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.MvcApplicationPartsAssemblyInfo.cache
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.RazorAssemblyInfo.cache
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.RazorAssemblyInfo.cs
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.dll
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\refint\PROYECTO-ED1.dll
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.pdb
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\bin\Debug\net6.0\appsettings.Development.json
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\bin\Debug\net6.0\appsettings.json
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\bin\Debug\net6.0\Clases\obj\Clases.csproj.nuget.dgspec.json
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\bin\Debug\net6.0\Clases\obj\project.assets.json
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\bin\Debug\net6.0\PROYECTO-ED1.staticwebassets.runtime.json
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\bin\Debug\net6.0\PROYECTO-ED1.exe
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\bin\Debug\net6.0\PROYECTO-ED1.deps.json
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\bin\Debug\net6.0\PROYECTO-ED1.runtimeconfig.json
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\bin\Debug\net6.0\PROYECTO-ED1.dll
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\bin\Debug\net6.0\PROYECTO-ED1.pdb
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\staticwebassets\msbuild.PROYECTO-ED1.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\staticwebassets\msbuild.build.PROYECTO-ED1.props
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.PROYECTO-ED1.props
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.PROYECTO-ED1.props
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\staticwebassets.pack.json
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\staticwebassets.build.json
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\staticwebassets.development.json
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\scopedcss\bundle\PROYECTO-ED1.styles.css
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\scopedcss\projectbundle\PROYECTO-ED1.bundle.scp.css
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\PROYECTO-ED1.genruntimeconfig.cache
+E:\Carlos\source\repos\Estructura de Datos I\PROYECTO-ED1\obj\Debug\net6.0\ref\PROYECTO-ED1.dll

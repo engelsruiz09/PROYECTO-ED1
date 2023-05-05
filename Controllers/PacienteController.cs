@@ -319,7 +319,25 @@ namespace PROYECTO_ED1.Controllers
                 return RedirectToAction(nameof(Index_Paciente));
             }
         }
-
+        public ActionResult Filtro4()
+        {
+            string Logoterapia = "Logoterapia";
+            string Psicodinamica = "Psicodinámica";
+            try
+            {
+                Singleton.Instance.bandera = 3;
+                Singleton.Instance.Aux = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Logoterapia || a.Descripcion == Psicodinamica, p => (DateTime.Now - p.FDU).TotalDays > 15);
+                int a = Singleton.Instance.miAVL.GetComparaciones();
+                TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+            catch (Exception)
+            {
+                Singleton.Instance.bandera = 0;
+                ViewData["Message"] = "No Encontrado";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+        }
         public ActionResult RegistrarConsulta()
         {
             return View();
@@ -362,26 +380,6 @@ namespace PROYECTO_ED1.Controllers
                 return RedirectToAction(nameof(Consultas));
             }
         }
-        public ActionResult Filtro4()
-        {
-            string Logoterapia = "Logoterapia";
-            string Psicodinamica = "Psicodinámica";
-            try
-            {
-                Singleton.Instance.bandera = 3;
-                Singleton.Instance.Aux = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Logoterapia || a.Descripcion == Psicodinamica, p => (DateTime.Now - p.FDU).TotalDays > 30);
-                int a = Singleton.Instance.miAVL.GetComparaciones();
-                TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
-                return RedirectToAction(nameof(Index_Paciente));
-            }
-            catch (Exception)
-            {
-                Singleton.Instance.bandera = 0;
-                ViewData["Message"] = "No Encontrado";
-                return RedirectToAction(nameof(Index_Paciente));
-            }
-        }
-
         public ActionResult ModificarConsulta()
         {
             return View();

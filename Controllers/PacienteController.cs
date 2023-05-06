@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic.FileIO;
-
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace PROYECTO_ED1.Controllers
 {
@@ -31,6 +31,11 @@ namespace PROYECTO_ED1.Controllers
                 Singleton.Instance.bandera = 0;
                 return View(Singleton.Instance.Consultas);
             }
+            else if (Singleton.Instance.bandera == 3)
+            {
+                Singleton.Instance.bandera = 0;
+                return View(Singleton.Instance.Aux);
+            }
             else
             {
                 return View(Singleton.Instance.miAVL.ObtenerLista());
@@ -43,7 +48,7 @@ namespace PROYECTO_ED1.Controllers
                 Singleton.Instance.bandera = 0;
                 return View(Singleton.Instance.Consultas);
             }
-            return View();
+            return View(Singleton.Instance.Consultas);
         }
 
         public ActionResult Create_Paciente()
@@ -66,7 +71,8 @@ namespace PROYECTO_ED1.Controllers
                     DPI = collection["dpi"],
                     Edad = collection["edad"],
                     Telefono = collection["telefono"],
-                    Descripcion = collection["descripcion"]
+                    Descripcion = collection["descripcion"],
+                    Asistencia = collection["asistencia"]
                 };
 
                 if (Convert.ToDateTime(collection["FDU"]) < Convert.ToDateTime(DateTime.Today))
@@ -147,7 +153,7 @@ namespace PROYECTO_ED1.Controllers
 
         public ActionResult CargarArchivo2(IFormFile File)
         {
-            string Nombre = "", DPI = "", Edad = "", Telefono = "", UConsul = "", PConsul = "", Diagnostico = "", Categoria = "";
+            string Nombre = "", DPI = "", Edad = "", Telefono = "", UConsul = "", PConsul = "", Asistencia = "", Descripcion = "";
 
             try
             {
@@ -180,19 +186,37 @@ namespace PROYECTO_ED1.Controllers
                             Telefono = Convert.ToString(fields[3]);
                             UConsul = Convert.ToString(fields[4]);
                             PConsul= Convert.ToString(fields[5]);
-                            Categoria = Convert.ToString(fields[6]);
-                            Diagnostico= Convert.ToString(fields[7]);
-                            Pacientes NuevoPaciente = new Pacientes
+                            Descripcion = Convert.ToString(fields[6]);
+                            Asistencia= Convert.ToString(fields[7]);
+                            Pacientes NuevoPaciente;
+                            if (PConsul != "null" )
                             {
-                                Nombre = Nombre,
-                                DPI = DPI,
-                                Edad = Edad,
-                                Telefono = Telefono,
-                                FDU = Convert.ToDateTime(UConsul),
-                                FDP = Convert.ToDateTime(PConsul),
-                                Asistencia = Categoria,
-                                Descripcion = Diagnostico,
-                            };
+                                NuevoPaciente = new Pacientes
+                                {
+                                    Nombre = Nombre,
+                                    DPI = DPI,
+                                    Edad = Edad,
+                                    Telefono = Telefono,
+                                    FDU = Convert.ToDateTime(UConsul),
+                                    FDP = Convert.ToDateTime(PConsul),
+                                    Descripcion = Descripcion,
+                                    Asistencia = Asistencia
+                                };
+                            }
+                            else
+                            {
+                                NuevoPaciente = new Pacientes
+                                {
+                                    Nombre = Nombre,
+                                    DPI = DPI,
+                                    Edad = Edad,
+                                    Telefono = Telefono,
+                                    FDU = Convert.ToDateTime(UConsul),
+                                    Descripcion = Descripcion,
+                                    Asistencia = Asistencia
+                                };
+                            }
+
                             Singleton.Instance.miAVL.Add(NuevoPaciente);
                         }
                     }
@@ -205,25 +229,6 @@ namespace PROYECTO_ED1.Controllers
                 return RedirectToAction(nameof(Index_Paciente));
             }
         }
-
-       /* public void LeerArchivo()
-        {
-            string RutaTXT = @"Pacientes.csv";
-            var Archivo = new StreamReader(RutaTXT);
-            {
-                string info = Archivo.ReadToEnd().Remove(0, 101);
-                foreach(string fila in info.Split("\n"))
-                {
-                    try
-                    {
-                        var NuevoPaciente = new Pacientes();
-                        {
-                            
-                        }
-                    }
-                }
-            }
-        }*/
 
         public ActionResult Busqueda_Paciente(string Busqueda)
         {
@@ -259,14 +264,13 @@ namespace PROYECTO_ED1.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Filtro2()
+        public ActionResult Filtro1()
         {
-            string Cognitivo = "Cognitivo";
-            string Conductual = "Conductual";
+            string SinTratamiento = "";
             try
             {
-                Singleton.Instance.bandera = 1;
-                //Singleton.Instance.AuxP = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Cognitivo, b => b.Descripcion == Conductual, p => (DateTime.Now - p.FDU).TotalDays > 30);
+                Singleton.Instance.bandera = 3;
+                Singleton.Instance.Aux = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == SinTratamiento, p => (DateTime.Now - p.FDU).TotalDays > 180);
                 int a = Singleton.Instance.miAVL.GetComparaciones();
                 TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
                 return RedirectToAction(nameof(Index_Paciente));
@@ -278,7 +282,62 @@ namespace PROYECTO_ED1.Controllers
                 return RedirectToAction(nameof(Index_Paciente));
             }
         }
-
+        public ActionResult Filtro2()
+        {
+            string Cognitivo = "Cognitivo";
+            string Conductual = "Conductual";
+            try
+            {
+                Singleton.Instance.bandera = 3;
+                Singleton.Instance.Aux = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Cognitivo || a.Descripcion == Conductual, p => (DateTime.Now - p.FDU).TotalDays > 30);
+                int a = Singleton.Instance.miAVL.GetComparaciones();
+                TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+            catch (Exception)
+            {
+                Singleton.Instance.bandera = 0;
+                ViewData["Message"] = "No Encontrado";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+        }
+        public ActionResult Filtro3()
+        {
+            string Gestaltica = "Gestáltica";
+            try
+            {
+                Singleton.Instance.bandera = 3;
+                Singleton.Instance.Aux = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Gestaltica, p => (DateTime.Now - p.FDU).TotalDays > 60);
+                int a = Singleton.Instance.miAVL.GetComparaciones();
+                TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+            catch (Exception)
+            {
+                Singleton.Instance.bandera = 0;
+                ViewData["Message"] = "No Encontrado";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+        }
+        public ActionResult Filtro4()
+        {
+            string Logoterapia = "Logoterapia";
+            string Psicodinamica = "Psicodinámica";
+            try
+            {
+                Singleton.Instance.bandera = 3;
+                Singleton.Instance.Aux = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Logoterapia || a.Descripcion == Psicodinamica, p => (DateTime.Now - p.FDU).TotalDays > 15);
+                int a = Singleton.Instance.miAVL.GetComparaciones();
+                TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+            catch (Exception)
+            {
+                Singleton.Instance.bandera = 0;
+                ViewData["Message"] = "No Encontrado";
+                return RedirectToAction(nameof(Index_Paciente));
+            }
+        }
         public ActionResult RegistrarConsulta()
         {
             return View();
@@ -304,11 +363,12 @@ namespace PROYECTO_ED1.Controllers
                 }
                 if (cont >= 12)
                 {
-                    TempData["FEC"] = "Ya no se pueden atender mas pacientes en esa fecha, porfavor ingrese otra.";
+                    TempData["FEC2"] = "Ya no se pueden atender mas pacientes en esa fecha, porfavor ingrese otra.";
                     throw new Exception(null);
                 }
                 else
                 {
+
                     Singleton.Instance.Consultas.Add(consulta);
                     Singleton.Instance.bandera = 2;
                 }
@@ -321,26 +381,6 @@ namespace PROYECTO_ED1.Controllers
                 return RedirectToAction(nameof(Consultas));
             }
         }
-        public ActionResult Filtro4()
-        {
-            string Logoterapia = "Logoterapia";
-            string Psicodinamica = "Psicodinámica";
-            try
-            {
-                Singleton.Instance.bandera = 1;
-                //Singleton.Instance.AuxP = Singleton.Instance.miAVL.Obtener2(a => a.Descripcion == Logoterapia, b => b.Descripcion == Psicodinamica, p => (DateTime.Now - p.FDU).TotalDays > 14);
-                int a = Singleton.Instance.miAVL.GetComparaciones();
-                TempData["TComp3"] = "Se realizaron: " + Convert.ToString(a) + " comparaciones.";
-                return RedirectToAction(nameof(Index_Paciente));
-            }
-            catch (Exception)
-            {
-                Singleton.Instance.bandera = 0;
-                ViewData["Message"] = "No Encontrado";
-                return RedirectToAction(nameof(Index_Paciente));
-            }
-        }
-
         public ActionResult ModificarConsulta()
         {
             return View();
@@ -355,11 +395,11 @@ namespace PROYECTO_ED1.Controllers
                 Consulta consulta = new Models.Consulta //se crea nueva consulta con el paciente y la fecha
                 {
                     paciente = Singleton.Instance.miAVL.ObtenerLista().FirstOrDefault(a => a.DPI == collection["DPI"]),//se busca al paciente en el avl 
-                    fecha = Convert.ToDateTime(collection["FUP"])//se agrega la fecha de la consulta
+                    fecha = Convert.ToDateTime(collection["FDU"])//se agrega la fecha de la consulta
                 };
                 foreach (var c  in Singleton.Instance.Consultas)
                 {
-                    if (c == consulta)
+                    if (c.fecha == consulta.fecha && c.paciente.DPI == consulta.paciente.DPI)
                     {
                         foreach (var con in Singleton.Instance.Consultas)
                         {
@@ -368,7 +408,7 @@ namespace PROYECTO_ED1.Controllers
                                 cont++;
                             }
                         }
-                        if (cont <= 12)
+                        if (cont >= 12)
                         {
                             TempData["FEC"] = "Ya no se pueden atender mas pacientes en esa fecha, porfavor ingrese otra.";
                             throw new Exception(null);
@@ -379,15 +419,11 @@ namespace PROYECTO_ED1.Controllers
                             Singleton.Instance.Consultas.Remove(c);
                             Singleton.Instance.Consultas.Add(consulta);
                             Singleton.Instance.bandera = 2;
+                            break;
                         }
                     }
-                    else
-                    {
-                        TempData["NEP"] = "No exista la consulta que quiere modificar, porfavor revise sus datos.";
-                        throw new Exception(null);
-                    }
                 }
-                return RedirectToAction(nameof(Consultas));
+                 return RedirectToAction(nameof(Consultas));
             }
             catch (Exception)
             {

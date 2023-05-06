@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Xd6KLTtwSVeOJvCwkHB/rQzD1/iOdAB7vQ/o1PKTFA4=",
+  "Hash": "IhnF20RIH2TYX1M6vp5tJtNYQvDvRqLYjXzcIS5reNQ=",
   "Source": "PROYECTO-ED1",
   "BasePath": "_content/PROYECTO-ED1",
   "Mode": "Default",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\Uploads\\ArchivoPacientes.csv",
+      "SourceId": "PROYECTO-ED1",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\",
+      "BasePath": "_content/PROYECTO-ED1",
+      "RelativePath": "Uploads/ArchivoPacientes.csv",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\ArchivoPacientes.csv"
     },
     {
       "Identity": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\Uploads\\Prueba2.csv",

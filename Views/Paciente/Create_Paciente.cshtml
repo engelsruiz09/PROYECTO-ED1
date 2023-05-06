@@ -1,7 +1,7 @@
 ﻿@model PROYECTO_ED1.Models.Pacientes
 
 @{
-    ViewData["Title"] = "Create_Paciente";
+    ViewData["Title"] = "Añadir Paciente";
 }
 <div class="fondo-create">
     <div class="espacio">
@@ -82,7 +82,11 @@
                                 <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
                                 <div class="col-md-12">
                                     <label asp-for="Asistencia" class="control-label"></label>
-                                    <input asp-for="Asistencia" class="form-control" />
+                                    <select asp-for="Asistencia" class="form-control">
+                                        <option value="Virtual">Virtual</option>
+                                        <option value="Presencial">Presencial</option>
+                                        <option value="Híbrido">Híbrido</option>
+                                    </select>
                                     <span asp-validation-for="Asistencia" class="text-danger"></span>
                                 </div>
                             </div>

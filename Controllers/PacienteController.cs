@@ -48,7 +48,7 @@ namespace PROYECTO_ED1.Controllers
                 Singleton.Instance.bandera = 0;
                 return View(Singleton.Instance.Consultas);
             }
-            return View();
+            return View(Singleton.Instance.Consultas);
         }
 
         public ActionResult Create_Paciente()
@@ -71,7 +71,8 @@ namespace PROYECTO_ED1.Controllers
                     DPI = collection["dpi"],
                     Edad = collection["edad"],
                     Telefono = collection["telefono"],
-                    Descripcion = collection["descripcion"]
+                    Descripcion = collection["descripcion"],
+                    Asistencia = collection["asistencia"]
                 };
 
                 if (Convert.ToDateTime(collection["FDU"]) < Convert.ToDateTime(DateTime.Today))
@@ -152,7 +153,7 @@ namespace PROYECTO_ED1.Controllers
 
         public ActionResult CargarArchivo2(IFormFile File)
         {
-            string Nombre = "", DPI = "", Edad = "", Telefono = "", UConsul = "", PConsul = "", Diagnostico = "", Categoria = "";
+            string Nombre = "", DPI = "", Edad = "", Telefono = "", UConsul = "", PConsul = "", Asistencia = "", Descripcion = "";
 
             try
             {
@@ -185,19 +186,37 @@ namespace PROYECTO_ED1.Controllers
                             Telefono = Convert.ToString(fields[3]);
                             UConsul = Convert.ToString(fields[4]);
                             PConsul= Convert.ToString(fields[5]);
-                            Categoria = Convert.ToString(fields[6]);
-                            Diagnostico= Convert.ToString(fields[7]);
-                            Pacientes NuevoPaciente = new Pacientes
+                            Descripcion = Convert.ToString(fields[6]);
+                            Asistencia= Convert.ToString(fields[7]);
+                            Pacientes NuevoPaciente;
+                            if (PConsul != "null" )
                             {
-                                Nombre = Nombre,
-                                DPI = DPI,
-                                Edad = Edad,
-                                Telefono = Telefono,
-                                FDU = Convert.ToDateTime(UConsul),
-                                FDP = Convert.ToDateTime(PConsul),
-                                Asistencia = Categoria,
-                                Descripcion = Diagnostico,
-                            };
+                                NuevoPaciente = new Pacientes
+                                {
+                                    Nombre = Nombre,
+                                    DPI = DPI,
+                                    Edad = Edad,
+                                    Telefono = Telefono,
+                                    FDU = Convert.ToDateTime(UConsul),
+                                    FDP = Convert.ToDateTime(PConsul),
+                                    Descripcion = Descripcion,
+                                    Asistencia = Asistencia
+                                };
+                            }
+                            else
+                            {
+                                NuevoPaciente = new Pacientes
+                                {
+                                    Nombre = Nombre,
+                                    DPI = DPI,
+                                    Edad = Edad,
+                                    Telefono = Telefono,
+                                    FDU = Convert.ToDateTime(UConsul),
+                                    Descripcion = Descripcion,
+                                    Asistencia = Asistencia
+                                };
+                            }
+
                             Singleton.Instance.miAVL.Add(NuevoPaciente);
                         }
                     }
@@ -210,25 +229,6 @@ namespace PROYECTO_ED1.Controllers
                 return RedirectToAction(nameof(Index_Paciente));
             }
         }
-
-       /* public void LeerArchivo()
-        {
-            string RutaTXT = @"Pacientes.csv";
-            var Archivo = new StreamReader(RutaTXT);
-            {
-                string info = Archivo.ReadToEnd().Remove(0, 101);
-                foreach(string fila in info.Split("\n"))
-                {
-                    try
-                    {
-                        var NuevoPaciente = new Pacientes();
-                        {
-                            
-                        }
-                    }
-                }
-            }
-        }*/
 
         public ActionResult Busqueda_Paciente(string Busqueda)
         {
@@ -303,7 +303,7 @@ namespace PROYECTO_ED1.Controllers
         }
         public ActionResult Filtro3()
         {
-            string Gestaltica = "Gestaltica";
+            string Gestaltica = "Gestáltica";
             try
             {
                 Singleton.Instance.bandera = 3;
@@ -363,11 +363,12 @@ namespace PROYECTO_ED1.Controllers
                 }
                 if (cont >= 12)
                 {
-                    TempData["FEC"] = "Ya no se pueden atender mas pacientes en esa fecha, porfavor ingrese otra.";
+                    TempData["FEC2"] = "Ya no se pueden atender mas pacientes en esa fecha, porfavor ingrese otra.";
                     throw new Exception(null);
                 }
                 else
                 {
+
                     Singleton.Instance.Consultas.Add(consulta);
                     Singleton.Instance.bandera = 2;
                 }
@@ -394,11 +395,11 @@ namespace PROYECTO_ED1.Controllers
                 Consulta consulta = new Models.Consulta //se crea nueva consulta con el paciente y la fecha
                 {
                     paciente = Singleton.Instance.miAVL.ObtenerLista().FirstOrDefault(a => a.DPI == collection["DPI"]),//se busca al paciente en el avl 
-                    fecha = Convert.ToDateTime(collection["FUP"])//se agrega la fecha de la consulta
+                    fecha = Convert.ToDateTime(collection["FDU"])//se agrega la fecha de la consulta
                 };
                 foreach (var c  in Singleton.Instance.Consultas)
                 {
-                    if (c == consulta)
+                    if (c.fecha == consulta.fecha && c.paciente.DPI == consulta.paciente.DPI)
                     {
                         foreach (var con in Singleton.Instance.Consultas)
                         {
@@ -407,7 +408,7 @@ namespace PROYECTO_ED1.Controllers
                                 cont++;
                             }
                         }
-                        if (cont <= 12)
+                        if (cont >= 12)
                         {
                             TempData["FEC"] = "Ya no se pueden atender mas pacientes en esa fecha, porfavor ingrese otra.";
                             throw new Exception(null);
@@ -418,15 +419,11 @@ namespace PROYECTO_ED1.Controllers
                             Singleton.Instance.Consultas.Remove(c);
                             Singleton.Instance.Consultas.Add(consulta);
                             Singleton.Instance.bandera = 2;
+                            break;
                         }
                     }
-                    else
-                    {
-                        TempData["NEP"] = "No exista la consulta que quiere modificar, porfavor revise sus datos.";
-                        throw new Exception(null);
-                    }
                 }
-                return RedirectToAction(nameof(Consultas));
+                 return RedirectToAction(nameof(Consultas));
             }
             catch (Exception)
             {

@@ -1,11 +1,35 @@
 ﻿@model IEnumerable<PROYECTO_ED1.Models.Consulta>
 
 @{
-    ViewData["Title"] = "Consultas";
+    ViewData["Title"] = "Listado Consultas";
 }
 
 <h1 class="text-center display-2">Consultas</h1>
 
+@if (!string.IsNullOrEmpty(ViewData["Message"] as string))
+{
+    <div class="alert alert-danger">
+        @ViewData["Message"]
+    </div>
+}
+@if (TempData.ContainsKey("NEP"))
+{
+    <div class="alert alert-danger">
+        @TempData["NEP"]
+    </div>
+}
+@if (TempData.ContainsKey("FEC"))
+{
+    <div class="alert alert-danger">
+        @TempData["FEC"]
+    </div>
+}
+@if (TempData.ContainsKey("FEC2"))
+{
+    <div class="alert alert-danger">
+        @TempData["FEC2"]
+    </div>
+}
 
 <table class="table">
     <thead>

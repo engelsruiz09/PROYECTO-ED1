@@ -329,7 +329,7 @@ namespace Clases
             return prov;
         }
 
-        public List<T> Obtener2(Func<T, bool> Predicate, Func<T, bool> Predicate2, Func<T, bool> Predicate3)//metodo para obtener ciertos datos de la lista ordenada
+        public List<T> Obtener2(Func<T, bool> Predicate, Func<T, bool> Predicate2)//metodo para obtener ciertos datos de la lista ordenada
         {
             List<T> prov = new List<T>();
             Nodo <T> cmp = new Nodo<T>();
@@ -337,14 +337,9 @@ namespace Clases
             ObtenerLista();
             for (int i = 0; i < listaOrdenada.Count(); i++)
             {
-                if (Predicate3(listaOrdenada[i]))
+                if (Predicate2(listaOrdenada[i]))
                 {
                     if (Predicate(listaOrdenada[i]))
-                    {
-                        comparaciones = i;
-                        prov.Add(listaOrdenada[i]);
-                    }
-                    else if (Predicate2(listaOrdenada[i]))
                     {
                         comparaciones = i;
                         prov.Add(listaOrdenada[i]);

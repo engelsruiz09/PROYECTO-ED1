@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\PROYECTO-ED1.bundle.scp.css"
     },
     {
+      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\Uploads\\ArchivoPacientes.csv",
+      "PackagePath": "staticwebassets\\Uploads\\ArchivoPacientes.csv"
+    },
+    {
       "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\PROYECTO-ED1\\wwwroot\\Uploads\\Prueba2.csv",
       "PackagePath": "staticwebassets\\Uploads\\Prueba2.csv"
     },

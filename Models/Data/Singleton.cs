@@ -19,6 +19,7 @@
         // Arbol AVL y objeto Paciente para mostrar 
         public int bandera;
         public Pacientes AuxP = new Pacientes();
+        public List<Pacientes> Aux = new List<Pacientes>();
         public Clases.AVL<Pacientes> miAVL = new Clases.AVL<Pacientes>();
         public Clases.ListaPacientes ListaPacientes = new Clases.ListaPacientes();
 

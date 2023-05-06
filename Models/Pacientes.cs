@@ -35,7 +35,7 @@ namespace PROYECTO_ED1.Models
         [Display(Name = "Fecha de última consulta")]
         [DataType(DataType.Date)]
         [Required(ErrorMessage = "El campo {0} es requerido.")]
-        public DateTime? FDU { get; set; }
+        public DateTime FDU { get; set; }
 
 
         //fecha de proxima consulta - opcional
